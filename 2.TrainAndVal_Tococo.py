@@ -108,6 +108,7 @@ if __name__ == '__main__':
     save_json_train = 'instances_trainperson.json'
     save_json_val = 'instances_valperson.json'
 
+    # 分别对train_xml/val_xml文件夹下的xml文件进行转换
     xml_list_train = glob.glob('train_xml/' + '*.xml')
     xml_list_val = glob.glob('val_xml/' + '*.xml')
     convert(xml_list_train, save_json_train)

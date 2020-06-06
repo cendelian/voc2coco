@@ -6,6 +6,8 @@ import shutil
 import numpy as np
 import xml.etree.ElementTree as ET
 
+# JPEGImages为原始的数据集文件夹
+# Annotations为原始的数据集对应的标签文件夹
 JPEGImages = 'JPEGImages/'
 Annotations = 'Annotations/'
 
@@ -26,7 +28,10 @@ img_xml_list_val = imageid[train_num:]
 
 
 # 开始搬运jpg和xml到各自对应的文件夹
-
+# train 为划分后的训练集文件夹
+# train_xml为划分后训练集对应的xml文件夹
+# val 为划分后的训练集文件夹
+# val_xml为划分后训练集对应的xml文件夹
 
 for i in img_xml_list_train:
     img_name = os.path.join(JPEGImages + i + '.jpg')
